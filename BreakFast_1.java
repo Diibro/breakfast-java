@@ -4,8 +4,40 @@ import java.util.Scanner;
 public class BreakFast_1{
      public static Scanner getin = new Scanner(System.in);
      public static void main(String[] a){
-          System.out.println(" my first Breakfast from oop");
-          tea_3();
+         messagePrint("\n\nMy Breakfast from oop java", 2, '-');
+         String[] messages = {"Check the quarter of a month: 1", "Print the odd values in certain range: 2", "Reverse an integer: 3"};
+         multilinePrinter(messages, 0, '-');
+          System.out.print("\nEnter your choice: ");
+          int n = getin.nextInt();
+          switch(n){
+               case 1: tea_1();
+               break;    
+               case 2: tea_2();
+               break;
+               case 3: tea_3();
+               break;
+               default: messagePrint("Please enter a valid value", 1, '*');
+          }
+
+     }
+
+     public static void messagePrint(String message, int choice, char signi){
+          System.out.println(message);
+          if(choice >= 1){
+               for (int j = 1; j <= choice; j++){
+                    for(int i = 0; i < message.length(); i++ ){
+                         System.out.print(signi);
+                    }
+                    System.out.println(" ");
+               }
+               System.out.println(" ");
+          }
+     }
+
+     public static void multilinePrinter(String[] messages, int choice, char signi) {
+          for (int i = 0; i < messages.length; i++){
+               messagePrint(messages[i], choice, signi);
+          } 
      }
 
      public static void tea_1() {

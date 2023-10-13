@@ -1,0 +1,49 @@
+01. using switch statement write a program that checks a number of month and display out the quarter it belongs.
+
+02. write a program using for loop to display odd number between two values inserted by user.
+
+03. using do while write a program that display interest rate of the amount of loan taken in the bank, the maturity of loan is 12 months and interest rate is 15%. the user will need to put amount of loan and display the interest of 12 months and total amount that a customer will pay at the end of the 12 months
+
+04. Write a program that prompts the user to input an integer and then outputs the number with the digits reversed. For example, if the input is 12345, the output should be 54321.
+
+05.Write a program that reads a set of integers, and then prints the sum of the even and odd integers.
+
+06. Write a do-while loop that asks the user to enter two numbers. The numbers should be added and the sum displayed. The loop should ask the user whether he or she wishes to perform the operation again. If so, the loop should repeat; otherwise it should terminate.
+
+07. Write a program to print out all Armstrong numbers between 1 and 500. If sum of cubes of each digit of the number is equal to the number itself, then the number is called an Armstrong number.
+For example, 153 = ( 1 * 1 * 1 ) + ( 5 * 5 * 5 ) + ( 3 * 3 * 3 )  
+
+08. Write a program to print following :
+
+ 
+
+i)
+	
+
+****
+****
+****
+****
+	
+
+ii)
+	
+
+*
+**
+*
+**
+***
+	
+
+iii)
+	
+
+        *
+      **
+    *
+  **
+***
+9. Write a program to enter the numbers till the user wants and at the end it should display the count of positive, negative and zeros entered
+
+10. Determine and print the number of times the character ‘a’ appears in the input entered by the user.
