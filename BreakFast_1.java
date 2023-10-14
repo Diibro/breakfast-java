@@ -5,7 +5,13 @@ public class BreakFast_1{
      public static Scanner getin = new Scanner(System.in);
      public static void main(String[] a){
          messagePrint("\n\nMy Breakfast from oop java", 2, '-');
-         String[] messages = {"Check the quarter of a month: 1", "Print the odd values in certain range: 2", "Reverse an integer: 3"};
+         String[] messages = {
+               "Check the quarter of a month: 1",
+               "Print the odd values in certain range: 2", 
+               "Reverse an integer: 3",
+               "Print even sum and odd sum in set of numbers: 4",
+               "Perform several sum operations on numbers: 5"
+          };
          multilinePrinter(messages, 0, '-');
           System.out.print("\nEnter your choice: ");
           int n = getin.nextInt();
@@ -16,8 +22,13 @@ public class BreakFast_1{
                break;
                case 3: tea_3();
                break;
+               case 4: tea_4();
+               break;
+               case 5: tea_5();
+               break;
                default: messagePrint("Please enter a valid value", 1, '*');
           }
+          getin.close();
 
      }
 
@@ -87,4 +98,45 @@ public class BreakFast_1{
           System.out.println("the new number is " + (finalnum + 1));
      }
 
+     public static void tea_4(){
+          messagePrint("This is a sub system to print the sum of even and odd numbers with in a set of numbers you enter", 0, '0');
+          System.out.print("Enter the size of your array: " );
+          int numsize = getin.nextInt();
+          int[] nums = new int[numsize];
+          int evensum = 0, oddsum = 0;
+          for(int i=0; i < numsize; i++) {
+               nums[i] = getin.nextInt();
+               evensum += nums[i] % 2 == 0 ? nums[i] : 0 ;
+               oddsum += nums[i] % 2 == 1 ? nums[i] : 0 ;
+          }
+          StringBuilder str = new StringBuilder();
+          str.append("[ ");
+          for(int i = 0; i < numsize; i ++){
+               str.append(nums[i]);
+               if(i < numsize - 1){
+                    str.append(",");
+               }
+          }
+          str.append(" ]");
+          System.out.println( "for the set "+ str +" The sum of even numbers in the set is: " + evensum + "\nAnd the sum of the odd number is: "+ oddsum);
+     }
+
+     public static void tea_5(){
+          messagePrint("This is a sub program that performs sum operation on the numbers you enter", 1, '-');
+          boolean choice = true;
+          int num1, num2, numsum = 0;
+          String message = "";
+          do{
+               System.out.print("Enter first number: ");
+               num1 = getin.nextInt();
+               System.out.print("Enter second number: ");
+               num2 = getin.nextInt();
+               numsum = num1 + num2;
+               getin.nextLine();
+               System.out.println("the sum of the enter number is: " + numsum);
+               System.out.println("Do you wish to perform the operation again: ");
+               message = getin.nextLine();
+               choice = message.equals("yes");
+          }while(choice);
+     }
 }
