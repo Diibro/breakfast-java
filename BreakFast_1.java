@@ -10,7 +10,8 @@ public class BreakFast_1{
                "Print the odd values in certain range: 2", 
                "Reverse an integer: 3",
                "Print even sum and odd sum in set of numbers: 4",
-               "Perform several sum operations on numbers: 5"
+               "Perform several sum operations on numbers: 5",
+               "Print armstrong numbers btn 1 and 500"
           };
          multilinePrinter(messages, 0, '-');
           System.out.print("\nEnter your choice: ");
@@ -25,6 +26,8 @@ public class BreakFast_1{
                case 4: tea_4();
                break;
                case 5: tea_5();
+               break;
+               case 6: tea_6();
                break;
                default: messagePrint("Please enter a valid value", 1, '*');
           }
@@ -138,5 +141,19 @@ public class BreakFast_1{
                message = getin.nextLine();
                choice = message.equals("yes");
           }while(choice);
+     }
+
+     public static void tea_6(){
+          messagePrint("this is a subprogram that prints all armstrong number btn 1 and 500", 1, 'o');
+          for (int i = 1;i <= 500; i++){
+               String str = Integer.toString(i);
+               int numSum = 0, cubee, tempnum;
+               for(int j = 0; j < str.length(); j++){
+                    tempnum = str.charAt(j) - '0';
+                    cubee = tempnum * tempnum * tempnum;
+                    numSum += cubee;
+               }
+               if(numSum == i) System.out.print(i + " ");
+          }
      }
 }
