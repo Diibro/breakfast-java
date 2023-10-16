@@ -11,7 +11,9 @@ public class BreakFast_1{
                "Reverse an integer: 3",
                "Print even sum and odd sum in set of numbers: 4",
                "Perform several sum operations on numbers: 5",
-               "Print armstrong numbers btn 1 and 500"
+               "Print armstrong numbers btn 1 and 500: 6",
+               "Print the square button: 7",
+               "Print increasing pattern: 8"
           };
          multilinePrinter(messages, 0, '-');
           System.out.print("\nEnter your choice: ");
@@ -28,6 +30,10 @@ public class BreakFast_1{
                case 5: tea_5();
                break;
                case 6: tea_6();
+               break;
+               case 7: tea_7();
+               break;
+               case 8: tea_8();
                break;
                default: messagePrint("Please enter a valid value", 1, '*');
           }
@@ -154,6 +160,36 @@ public class BreakFast_1{
                     numSum += cubee;
                }
                if(numSum == i) System.out.print(i + " ");
+          }
+     }
+     public static void tea_7(){
+          messagePrint("this is a sub program that prints square pattern", 1, '+');
+          System.out.print("Enter the length: ");
+          int m = getin.nextInt();
+          System.out.print("Enter the width: ");
+          int n = getin.nextInt();
+          messagePrint("this is the square bruh", 1, '=');
+          for(int i = 0; i < n; i++){
+               for (int j = 0; j < m; j ++){
+                    System.out.print("*");
+               }
+               System.out.println();
+          }
+     }
+     public static void tea_8(){
+          messagePrint("this is a sub program to print an increasing pattern", 1, '#');
+          System.out.print("Enter the row count: ");
+          int rc = getin.nextInt();
+          int counter = 0;
+          for (int i = 1; i <= rc; i++ ){
+               for(int j = 1; j <= i ;j++ ){
+                    for(int k = 0; k < counter; k++){
+                         counter++;
+                         System.out.print("*");
+                    }
+               }
+
+               System.out.println();
           }
      }
 }
